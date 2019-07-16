@@ -18,11 +18,22 @@ export default {
   },
   mounted() {
     this.a.v(this)
-    this.a.apione()
+    this.a.apione({
+      // success: function (res) {
+      //   alert('请求成功')
+      //   console.log(res)
+      // }
+    })
   },
   methods: {
     getApi2(){
-      this.a.apitwo()
+      this.a.apitwo({
+        isBlock: false
+        // error: function (err) {
+        //   alert('请求失败')
+        //   console.log(err)
+        // }
+      })
     }
   }
 }
