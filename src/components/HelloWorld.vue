@@ -3,6 +3,11 @@
     <h1>{{apione.mes}}</h1>
     <p>{{apitwo}}</p>
     <button @click="getApi2">请求</button>
+    <button @click="goRouter('one')">props / $emit</button>
+    <button @click="goRouter('3')">provide / inject</button>
+    <button @click="goRouter('eventBus')">eventBus</button>
+    <button @click="goRouter('8')">$attr</button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -34,6 +39,9 @@ export default {
         //   console.log(err)
         // }
       })
+    },
+    goRouter(name) {
+      this.$router.push(name)
     }
   }
 }

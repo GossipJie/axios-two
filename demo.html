@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./src/assets/util/promise.js"></script>
+</head>
+<body>
+<script>
+  var callList = container("stopOnFalse")
+
+  callList.add(function () {
+    console.log("this is container")
+    return false
+  })
+
+  callList.add(function () {
+    console.log("hello xiaofeiji")
+  })
+
+  callList.fire()
+</script>
+</body>
+</html>
